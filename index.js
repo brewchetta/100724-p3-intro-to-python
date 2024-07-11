@@ -37,4 +37,33 @@ function someFunction(arg) {
     return `This is the argument you put in: ${arg}`
 }
 
+someFunction("whatever I want")
+
+
+
+
+
+
+
 const additionArrowFunc = (x, y) => x + y
+
+
+
+
+
+
+
+
+if (true) { 
+    console.log("I am true") 
+} else if (false) {
+    console.log("I am the else if condition")
+}
+
+const number = True ? 100 : -100
+
+const someObj = {
+    "name": "Bob"
+}
+
+someObj.theNameOfTheKey = "whatever I want"
