@@ -1,3 +1,7 @@
+// PRINTING
+
+console.log("Hello world")
+
 // DECLARING VARIABLES
 
 let firstName = "Chett"
