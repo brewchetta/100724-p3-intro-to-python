@@ -4,9 +4,11 @@ console.log("Hello world")
 
 // DECLARING VARIABLES
 
-let firstName = "Chett"
-const lastName = "Tiller"
-var fullName = `${firstName} ${lastName}`
+let firstName = "Chett" // can change
+const lastName = "Tiller" // cannot change - CONSTANT
+var fullName = `${firstName} ${lastName}` // DONT USE THIS
+
+firstName = "Bob"
 
 
 // PRIMITIVE DATA TYPES
@@ -16,13 +18,22 @@ const someInteger = 12
 const someFloat = 12.1
 const someBoolean = true
 
+console.log(typeof someString)
+
 
 // OTHER DATA TYPES
 
 const someArray = [1,2,3,4,5]
-const someObject = { name: "Chett", age: "unknown" }
+const somePlainOldJavascriptObject = { 
+    name: "Chett", 
+    age: "unknown", 
+    "1": "I am one", 
+    1: "I am 1" }
 const someTuple = 'what the heck is a tuple?'
-const someSet = Set( [1,2,3,3,3,3,3,3,3,4,5] )
+const someSet = new Set( [1,2,3,3,3,3,3,3,3,4,5] )
+
+someArray.push(6)
+somePlainOldJavascriptObject.name
 
 
 // CONDITIONAL STATEMENTS
@@ -30,8 +41,10 @@ const someSet = Set( [1,2,3,3,3,3,3,3,3,4,5] )
 const someValue = "I am truthy"
 let truthy
 
-if (someValue) {
+if (!someValue) {
     truthy = true
+} else if (someValue) {
+    console.log("We are at the else if")
 } else {
     truthy = false
 }
