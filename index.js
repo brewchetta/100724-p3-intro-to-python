@@ -12,7 +12,8 @@ var fullName = `${firstName} ${lastName}`
 // PRIMITIVE DATA TYPES
 
 const someString = "I am a string"
-const someNumber = 12
+const someInteger = 12
+const someFloat = 12.1
 const someBoolean = true
 
 
@@ -24,6 +25,21 @@ const someTuple = 'what the heck is a tuple?'
 const someSet = Set( [1,2,3,3,3,3,3,3,3,4,5] )
 
 
+// CONDITIONAL STATEMENTS
+
+const someValue = "I am truthy"
+let truthy
+
+if (someValue) {
+    truthy = true
+} else {
+    truthy = false
+}
+
+
+const someTernary = truthy ? true : false
+
+
 // LOOPS
 
 for (let i = 0; i < someArray.length; i++) {
@@ -31,39 +47,36 @@ for (let i = 0; i < someArray.length; i++) {
 }
 
 
+for (num of [1,2,3,4,5]) {
+    console.log(num)
+}
+
+
+let i = 0
+const cats = ["Octavia", "Ursula"]
+
+while (i < cats.length) {
+    console.log( `${cats[i]} is a pretty kitty` )
+    i++
+}
+
+
+const nums = [1,2,3,4,5,6,7,8,9,10]
+
+const squaredNums = nums.map(n => n**2)
+
+
 // DECLARING FUNCTIONS
 
-function someFunction(arg) {
-    return `This is the argument you put in: ${arg}`
+
+function goodOlFunction(someParameter) {
+    return `This is what you put in: ${someParameter}`
 }
 
-someFunction("whatever I want")
+goodOlFunction("I am an argument")
 
 
 
+const arrowFunction = (x, y) => x + y
 
-
-
-
-const additionArrowFunc = (x, y) => x + y
-
-
-
-
-
-
-
-
-if (true) { 
-    console.log("I am true") 
-} else if (false) {
-    console.log("I am the else if condition")
-}
-
-const number = True ? 100 : -100
-
-const someObj = {
-    "name": "Bob"
-}
-
-someObj.theNameOfTheKey = "whatever I want"
+arrowFunction(5, 10)
